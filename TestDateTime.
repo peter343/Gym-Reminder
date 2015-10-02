@@ -1,4 +1,3 @@
-import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -32,36 +31,41 @@ public class TestDateTime {
         else return -1;
     }
 
+
+
     public String showDayDateTime(int day){
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MMMMMMMMM/dd HH:mm");
+
+        DateFormat dateFormat = new SimpleDateFormat("MMM. d, yyyy h:mma");
         Date date = new Date();
         System.out.println();
-String result = "";
-        switch(day) {
-            case 0:
-                result =  "Today is Monday, " + dateFormat.format(date);
-            case 1:
-                result =  "Today is Tuesday, " + dateFormat.format(date);
-            case 2:
-                result =  "Today is Wednesday, " + dateFormat.format(date);
-            case 3:
-                return "Today is Thursday, " + dateFormat.format(date);
-            case 4:
-                return "Today is Friday, " + dateFormat.format(date);
-            case 5:
-                return "Today is Saturday, " + dateFormat.format(date);
-            case 6:
-                return "Today is Sunday, " + dateFormat.format(date);
-            case -1:
-                return null;
+        String result;
+        if(day == 0)
+            result =  "Today is Monday " + dateFormat.format(date);
+        else if (day == 1)
+            result =  "Today is Tuesday " + dateFormat.format(date);
+        else if (day == 2)
+            result =  "Today is Wednesday " + dateFormat.format(date);
+        else if (day == 3)
+            result = "Today is Thursday " + dateFormat.format(date);
+        else if (day == 4)
+            result = "Today is Friday " + dateFormat.format(date);
+        else if (day == 5)
+            result = "Today is Saturday " + dateFormat.format(date);
+        else if (day == 6)
+            result = "Today is Sunday " + dateFormat.format(date);
+        else result = null;
 
-        }
+        /*
+        Tell the user that it is a gym day if it is one
+         */
 
+return result;
     }
     public static void main(String[] args){
 
         TestDateTime test = new TestDateTime();
-        System.out.println("" + test.getDayOfWeek());
+        System.out.println(test.showDayDateTime(test.getDayOfWeek()));
+
     }
 
 

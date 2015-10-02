@@ -1,0 +1,63 @@
+/**
+ * Created by Andrew Peterson on 10/2/2015.
+ */
+public class GymDay extends TestDateTime {
+
+
+    String gDay =   "IT'S GYM DAY!";
+    String dayOff = "It's your day off! Still, try to get some cardio in!";
+    String ques =   "What time you'll be going to the gym today?";
+    String date = showDayDateTime(getDayOfWeek());
+
+    private void getGDay() { //Figures out the amount of spaces each line needs in order to look centered
+        int qlen = ques.length();
+        int qSpaces = (qlen - date.length())/2;
+        String qSp = "";
+
+        while(qSpaces > 0){
+            qSp += " ";
+            qSpaces--;
+        }
+        date = qSp + date;
+        int gLen = gDay.length();
+        int numSpaces = (date.length() - gLen) / 2; //the number of spaces IN TOTAL that will go before and after gDay
+        String gDaySpaces = "";
+
+        while(numSpaces> 0){
+            gDaySpaces += " ";
+            numSpaces--;
+        }
+        gDay = gDaySpaces + gDay;
+
+
+
+    }
+    private void getDayOff(){ //does same as getGDay except for on days off
+        int oLen = dayOff.length();
+        int spaces = (oLen - date.length()) / 2;
+        String dayOffSpaces = "";
+
+        while(spaces > 0){
+            dayOffSpaces += " ";
+            spaces--;
+        }
+        date = dayOffSpaces + date;
+    }
+    public String sayExc(){
+
+
+        if(day == cal.MONDAY || day == cal.WEDNESDAY || day == cal.FRIDAY) {
+            getGDay();
+            return gDay + "\n" + date + "\n" + ques;
+        }
+        else {
+            getDayOff();
+            return dayOff + "\n" + date;
+        }
+    }
+    public static void main(String[] args){
+        GymDay gym = new GymDay();
+        System.out.println("" + gym.sayExc());
+    }
+
+}

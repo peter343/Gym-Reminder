@@ -69,14 +69,14 @@ public class GymGUI extends Frame implements ActionListener {
                             "I MADE THIS PROGRAM TO TELL\n" +
                             "  YOU TO GO TO THE GYM...\n" +
                             "      SO WILL YOU GO?!",
-                    "FUCKING GO YOU PUSSY",
+                    "GOOOOOOO TO THE GYM!",
                     JOptionPane.YES_NO_OPTION);
                 if(a == 0) {
                     JOptionPane.showMessageDialog(frame, "Good, I expect to see you there Ò_Ó");
                     System.exit(0);
                 }
                 else{
-                    JOptionPane.showMessageDialog(frame,"                     You suck dick, bitch!\n" +
+                    JOptionPane.showMessageDialog(frame,"                     You're a disappointment...\n" +
                                                         "I hope you can live with yourself, because I can't!");
                     System.exit(0);
                 }

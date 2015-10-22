@@ -18,7 +18,7 @@ When the program wakes up, it prompts the user to say whether or not they went t
 
 <b>WHAT IT OUTPUTS</b>
 
-After the user is asked if they went to the gym or not, the program will display various windows depending on which buttons the user presses. *WARNING Gym-Reminder currently has explicit language as a possible output. The messages displayed were for my own entertainment. Use at your own risk!*
+After the user is asked if they went to the gym or not, the program will display various windows depending on which buttons the user presses.
 
 <b>FUTURE PLANS</b>
 
